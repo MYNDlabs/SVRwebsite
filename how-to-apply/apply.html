@@ -1,0 +1,894 @@
+<meta charset="UTF-8">
+<title>Apply Now | SVR Security Solutions</title>
+<meta name="description" content="SVR's employment application — complete and submit online.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --jet: #0A0A0C; --gunmetal: #17171A; --charcoal: #232327;
+    --steel: #6B6D72; --silver: #C9CBCE; --platinum: #F1F1F3;
+    --gold: #C6A15B; --gold-deep: #A9822F; --bronze: #8B5E2B;
+    --bg: #F6F5F2; --surface: #FFFFFF; --surface-2: #EFECE5; --border: #E4E2DC;
+    --ink: #131316; --focus: #4d8ddb;
+    --shadow: 0 16px 36px -18px rgba(19, 19, 22, 0.28);
+    --shadow-deep: 0 22px 48px -18px rgba(0, 0, 0, 0.55);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: "Cinzel", "Times New Roman", serif; margin: 0; text-wrap: balance; font-weight: 600; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+  section { scroll-margin-top: 84px; }
+  .ph { border-bottom: 1.5px dashed var(--bronze); color: var(--bronze); cursor: help; }
+  ::selection { background: var(--gold); color: #1a1204; }
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: "Source Sans 3", sans-serif; font-weight: 700; font-size: 0.92rem; padding: 0.75rem 1.35rem; border-radius: 6px; text-decoration: none; cursor: pointer; border: 1.5px solid transparent; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; }
+  .btn-gold { background: var(--gold); color: #1a1204; }
+  .btn-gold:hover { background: var(--gold-deep); }
+  .btn-ghost-dark { border-color: rgba(241,241,243,0.35); color: var(--platinum); }
+  .btn-ghost-dark:hover { border-color: var(--gold); color: var(--gold); }
+  .btn-ghost-light { border-color: var(--border); color: var(--ink); background: var(--surface); }
+  .btn-ghost-light:hover { border-color: var(--gold-deep); color: var(--gold-deep); }
+
+  .utility-bar { background: var(--charcoal); color: var(--silver); font-size: 0.78rem; }
+  .utility-bar__inner { max-width: 1180px; margin: 0 auto; padding: 0.45rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .utility-bar a { text-decoration: none; color: var(--silver); transition: color 0.15s ease; }
+  .utility-bar a:hover { color: var(--gold); }
+  .utility-bar__tag { font-family: "IBM Plex Mono", monospace; letter-spacing: 0.04em; font-size: 0.72rem; }
+
+  header.site { background: var(--jet); position: sticky; top: 0; z-index: 40; box-shadow: var(--shadow-deep); }
+  .nav-row { max-width: 1180px; margin: 0 auto; padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 2rem; }
+  .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; flex-shrink: 0; }
+  .brand__mark { width: 38px; height: 38px; flex-shrink: 0; }
+  .brand__word { font-family: "Cinzel", serif; font-weight: 600; font-size: 1.05rem; color: var(--platinum); letter-spacing: 0.04em; line-height: 1.05; }
+  .brand__sub { display: block; font-family: "IBM Plex Mono", monospace; font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-top: 0.2rem; }
+
+  nav.l1 { display: flex; align-items: stretch; gap: 0.2rem; flex: 1; }
+  .l1-item { position: relative; }
+  .l1-item > button, .l1-item > a.l1-link { all: unset; display: flex; align-items: center; gap: 0.35rem; height: 100%; padding: 0.65rem 0.8rem; color: var(--silver); font-weight: 600; font-size: 0.9rem; border-radius: 6px; cursor: pointer; transition: color 0.15s ease, background 0.15s ease; }
+  .l1-item > button:hover, .l1-item > a.l1-link:hover { color: var(--platinum); background: rgba(255,255,255,0.06); }
+  .l1-item.current > button, .l1-item.current > a.l1-link { color: var(--gold); }
+  .l1-item[data-open="true"] > button { color: var(--platinum); background: rgba(255,255,255,0.09); }
+  .l1-item .caret { width: 8px; height: 8px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform 0.15s ease; opacity: 0.75; }
+  .l1-item[data-open="true"] .caret { transform: rotate(-135deg) translateY(1px); }
+
+  .l2-panel { position: absolute; top: calc(100% + 10px); left: 0; min-width: 270px; background: var(--gunmetal); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; box-shadow: var(--shadow-deep); padding: 0.5rem; display: none; flex-direction: column; }
+  .l1-item[data-open="true"] .l2-panel { display: flex; }
+  .l2-panel a { display: block; text-decoration: none; color: var(--silver); font-size: 0.88rem; font-weight: 500; padding: 0.55rem 0.7rem; border-radius: 6px; transition: background 0.15s ease, color 0.15s ease; }
+  .l2-panel a:hover, .l2-panel a.current { background: rgba(255,255,255,0.06); color: var(--gold); }
+
+  .menu-toggle { display: none; }
+
+  @media (max-width: 940px) {
+    .nav-row { flex-wrap: wrap; }
+    nav.l1 { order: 3; flex-basis: 100%; flex-direction: column; gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+    nav.l1[data-mobile-open="true"] { max-height: 1400px; padding-top: 0.5rem; }
+    .l1-item { width: 100%; }
+    .l1-item > button, .l1-item > a.l1-link { width: 100%; padding: 0.75rem 0.5rem; justify-content: space-between; border-radius: 4px; }
+    .l2-panel { position: static; box-shadow: none; border: none; background: rgba(255,255,255,0.03); margin: 0 0 0.4rem; }
+    .menu-toggle { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; background: transparent; border: 1px solid rgba(255,255,255,0.25); color: var(--platinum); padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+    .nav-cta { order: 2; }
+  }
+
+  .hero { background-color: var(--jet); background-position: center 10%; background-size: cover; background-repeat: no-repeat; color: var(--platinum); padding: 3rem 0; min-height: clamp(580px, 58vw, 900px); display: flex; align-items: center; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.65); z-index: 0; }
+  .hero .wrap { position: relative; z-index: 1; width: 100%; }
+  @media (max-width: 700px) { .hero { min-height: 0; background-position: 78% 12%; } }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--gold); display: block; margin-bottom: 0.9rem; }
+  .hero h1 { font-size: clamp(2rem, 4vw, 2.9rem); max-width: 20ch; }
+  .hero p.lede { max-width: 62ch; color: var(--silver); margin: 1.1rem 0 0; font-size: 1.05rem; }
+  .hero .cta-row { display: flex; gap: 0.9rem; margin-top: 2rem; flex-wrap: wrap; }
+
+  .page-hero { background: var(--jet); color: var(--platinum); padding: 3.6rem 0 3rem; }
+  .page-hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.4rem); max-width: 28ch; }
+  .page-hero p.lede { max-width: 64ch; color: var(--silver); margin: 1rem 0 0; font-size: 1rem; }
+
+  .breadcrumb { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 1rem; display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap; }
+  .breadcrumb a { color: var(--silver); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--gold); text-decoration: underline; }
+  .breadcrumb .sep { color: var(--steel); }
+
+  .stat-row { background: var(--gunmetal); border-top: 1px solid rgba(255,255,255,0.06); }
+  .stat-row .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 1.8rem 1.5rem; }
+  .stat { text-align: left; }
+  .stat .num { font-family: "Cinzel", serif; font-size: 1.5rem; color: var(--gold); }
+  .stat .label { font-size: 0.8rem; color: var(--silver); margin-top: 0.25rem; }
+  @media (max-width: 780px) { .stat-row .wrap { grid-template-columns: repeat(2, 1fr); } }
+
+  main { padding-bottom: 1rem; }
+  section.block { padding: 4rem 0; }
+  section.block.tight { padding: 2.6rem 0; }
+  section.block.alt { background: var(--surface-2); }
+  section.block.dark { background: var(--jet); color: var(--platinum); }
+  .block__head { max-width: 70ch; margin-bottom: 2.2rem; }
+  .block__head h2 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); }
+  .block__head p { color: var(--steel); margin-top: 0.7rem; font-size: 0.98rem; }
+  section.block.dark .block__head p { color: var(--silver); }
+
+  .prose { max-width: 70ch; font-size: 1rem; color: var(--ink); display: flex; flex-direction: column; gap: 1.1rem; }
+  section.block.dark .prose { color: var(--platinum); }
+  .prose strong { color: inherit; }
+
+  .pitch-block { border-left: 3px solid var(--gold); padding: 0.2rem 0 0.2rem 1.3rem; font-family: "Cinzel", serif; font-size: 1.2rem; line-height: 1.55; color: var(--ink); max-width: 64ch; }
+  section.block.dark .pitch-block { color: var(--platinum); }
+
+  .grid { display: grid; gap: 1.2rem; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.5rem 1.6rem; box-shadow: var(--shadow); }
+  .card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+  .card p { color: var(--steel); font-size: 0.92rem; margin: 0; }
+  .card .tag { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 0.7rem; }
+
+  .card-dark { background: var(--gunmetal); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.6rem 1.6rem 1.8rem; }
+  .card-dark h3 { color: var(--platinum); font-size: 1.1rem; margin-bottom: 0.6rem; }
+  .card-dark p { color: var(--silver); font-size: 0.92rem; margin: 0; }
+  .card-dark .tag { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+
+  .hub-card { display: flex; flex-direction: column; gap: 0.7rem; }
+  .hub-card a.hub-link, .role-card a.role-link { margin-top: auto; font-size: 0.86rem; font-weight: 700; color: var(--gold-deep); text-decoration: none; }
+  .hub-card a.hub-link:hover, .role-card a.role-link:hover { color: var(--bronze); text-decoration: underline; }
+  .role-card { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  .sector-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.5rem; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 0.55rem; }
+  .sector-card h3 { font-size: 1.02rem; }
+  .sector-card .badge { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: #1a1204; background: var(--gold); padding: 0.22rem 0.6rem; border-radius: 999px; width: fit-content; }
+  .sector-card .badge.alt { background: var(--surface-2); color: var(--steel); border: 1px solid var(--border); }
+  .sector-card p { color: var(--steel); font-size: 0.88rem; margin: 0; }
+  .sector-card .clients { font-size: 0.78rem; color: var(--bronze); font-family: "IBM Plex Mono", monospace; line-height: 1.5; }
+
+  .chip-row { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+  .chip { background: var(--surface-2); border: 1px solid var(--border); padding: 0.45rem 0.9rem; border-radius: 999px; font-size: 0.85rem; color: var(--ink); }
+  section.block.dark .chip { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); color: var(--platinum); }
+
+  .leader-card { display: flex; gap: 1.1rem; align-items: flex-start; }
+  .leader-card__photo { width: 64px; height: 64px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: "Cinzel", serif; color: var(--steel); font-size: 1.2rem; }
+  .leader-card h3 { font-size: 1.02rem; }
+  .leader-card .role { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold-deep); margin: 0.2rem 0 0.55rem; display: block; }
+  .leader-card p { color: var(--steel); font-size: 0.9rem; margin: 0; }
+
+  ul.check-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+  ul.check-list li { position: relative; padding-left: 1.7rem; color: var(--ink); font-size: 0.95rem; }
+  ul.check-list li::before { content: ""; position: absolute; left: 0; top: 0.32rem; width: 9px; height: 9px; border-right: 2px solid var(--gold-deep); border-bottom: 2px solid var(--gold-deep); transform: rotate(45deg); }
+  section.block.dark ul.check-list li { color: var(--platinum); }
+  section.block.dark ul.check-list li::before { border-color: var(--gold); }
+
+  ol.step-list { counter-reset: step; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.3rem; }
+  ol.step-list li { counter-increment: step; position: relative; padding-left: 3rem; }
+  ol.step-list li::before { content: counter(step); position: absolute; left: 0; top: -0.15rem; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--jet); color: var(--gold); font-family: "Cinzel", serif; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; }
+  ol.step-list h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+  ol.step-list p { color: var(--steel); font-size: 0.92rem; margin: 0; }
+
+  details.faq { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
+  details.faq summary { cursor: pointer; font-weight: 700; font-size: 0.98rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after { content: "+"; font-family: "Cinzel", serif; font-size: 1.2rem; color: var(--gold-deep); flex-shrink: 0; }
+  details.faq[open] summary::after { content: "\2212"; }
+  details.faq p { color: var(--steel); font-size: 0.92rem; margin: 0.8rem 0 0.1rem; }
+
+  .partner-tile { border: 1px dashed var(--border); border-radius: 10px; padding: 1.4rem 1rem; text-align: center; color: var(--bronze); font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; background: var(--surface); }
+
+  .news-card { display: flex; flex-direction: column; gap: 0.6rem; }
+  .news-card .date { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; color: var(--gold-deep); text-transform: uppercase; letter-spacing: 0.05em; }
+  .news-card a.read-more { font-size: 0.85rem; font-weight: 700; color: var(--gold-deep); text-decoration: none; }
+  .news-card a.read-more:hover { text-decoration: underline; }
+
+  .cta-banner { background: var(--jet); color: var(--platinum); padding: 3.2rem 0; text-align: center; }
+  .cta-banner h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); max-width: 38ch; margin: 0 auto; }
+  .cta-banner p { color: var(--silver); margin: 0.8rem auto 1.8rem; max-width: 52ch; }
+  .cta-banner .cta-row { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; }
+
+  .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; align-items: start; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+  form.contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+  @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field label { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+  .field input, .field textarea, .field select { font-family: "Source Sans 3", sans-serif; font-size: 0.95rem; padding: 0.7rem 0.85rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--ink); }
+  .field textarea { resize: vertical; min-height: 120px; }
+  .form-note { font-size: 0.78rem; color: var(--steel); font-family: "IBM Plex Mono", monospace; }
+
+  .contact-detail { display: flex; gap: 0.9rem; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+  .contact-detail:last-child { border-bottom: none; }
+  .contact-detail .k { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold-deep); width: 90px; flex-shrink: 0; padding-top: 0.15rem; }
+  .contact-detail .v { font-size: 0.95rem; }
+  .map-block { margin-top: 1.6rem; border: 1px dashed var(--border); border-radius: 10px; height: 220px; display: flex; align-items: center; justify-content: center; color: var(--bronze); font-family: "IBM Plex Mono", monospace; font-size: 0.82rem; background: var(--surface-2); text-align: center; padding: 1rem; }
+
+  /* ---------- application form ---------- */
+  .app-form fieldset.form-section { border: 1px solid var(--border); border-radius: 12px; padding: 1.7rem 1.7rem 1.9rem; background: var(--surface); box-shadow: var(--shadow); margin: 0 0 1.6rem; }
+  .app-form legend { font-family: "Cinzel", serif; font-weight: 600; font-size: 1.05rem; padding: 0 0.5rem; }
+  .app-form .section-note { color: var(--steel); font-size: 0.85rem; margin: -0.6rem 0 1.2rem; }
+  .app-form .field-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem 1.1rem; }
+  .app-form .field-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .app-form .field-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 700px) { .app-form .field-grid, .app-form .field-grid.cols-2, .app-form .field-grid.cols-4 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .app-form .field-grid, .app-form .field-grid.cols-2, .app-form .field-grid.cols-4 { grid-template-columns: 1fr; } }
+  .app-form .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+  .app-form .field.span-2 { grid-column: span 2; }
+  .app-form .field.span-3 { grid-column: span 3; }
+  .app-form .field label { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+  .app-form .field .hint { font-size: 0.74rem; color: var(--steel); font-weight: 400; }
+  .app-form input, .app-form select, .app-form textarea {
+    font-family: "Source Sans 3", sans-serif; font-size: 0.95rem; padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--ink); width: 100%;
+  }
+  .app-form input:focus, .app-form select:focus, .app-form textarea:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+  .app-form textarea { resize: vertical; min-height: 90px; }
+  .app-form input[type="checkbox"], .app-form input[type="radio"] { width: auto; accent-color: var(--gold-deep); }
+
+  .choice-row { display: flex; flex-wrap: wrap; gap: 1.4rem; margin: 0.3rem 0 1rem; }
+  .choice { display: flex; align-items: center; gap: 0.45rem; font-size: 0.92rem; color: var(--ink); }
+
+  table.shift-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; margin-bottom: 0.4rem; }
+  table.shift-table th { text-align: left; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.68rem; color: var(--steel); padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+  table.shift-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); }
+  table.shift-table select { padding: 0.4rem 0.5rem; font-size: 0.85rem; }
+
+  .history-block + .history-block { margin-top: 1.3rem; padding-top: 1.3rem; border-top: 1px dashed var(--border); }
+  .history-block .index-tag { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-deep); display: block; margin-bottom: 0.6rem; }
+
+  table.edu-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  table.edu-table th { text-align: left; font-family: "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.66rem; color: var(--steel); padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--border); }
+  table.edu-table td { padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.edu-table td.row-label { font-weight: 700; font-size: 0.82rem; white-space: nowrap; padding-top: 0.7rem; }
+  table.edu-table input { padding: 0.4rem 0.5rem; font-size: 0.82rem; }
+  .edu-table-scroll { overflow-x: auto; }
+
+  .legal-box { max-height: 260px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.2rem; background: var(--surface-2); font-size: 0.82rem; color: var(--steel); line-height: 1.6; margin-bottom: 1.2rem; }
+  .legal-box p { margin: 0 0 0.9rem; }
+  .legal-box p:last-child { margin-bottom: 0; }
+  .consent-list { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.3rem; }
+  .consent-list .choice { align-items: flex-start; font-size: 0.88rem; color: var(--ink); }
+  .consent-list .choice input { margin-top: 0.2rem; }
+
+  .privacy-note { display: flex; gap: 0.8rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 1.1rem 1.3rem; font-size: 0.86rem; color: var(--steel); margin-bottom: 1.8rem; }
+  .privacy-note strong { color: var(--ink); }
+
+  .submit-row { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+  #formStatus { font-size: 0.88rem; padding: 0.9rem 1.1rem; border-radius: 8px; display: none; max-width: 60ch; }
+  #formStatus.show { display: block; }
+  #formStatus.pending { background: var(--surface-2); color: var(--steel); border: 1px solid var(--border); }
+  #formStatus.success { background: #eef6ee; color: #2f5c30; border: 1px solid #bfe0c0; }
+  #formStatus.error { background: #fbecea; color: #8a2f24; border: 1px solid #f0c6bd; }
+  #formStatus a { color: inherit; font-weight: 700; }
+
+
+  footer.site { background: var(--jet); color: var(--silver); margin-top: 0; }
+  .footer-cols { max-width: 1180px; margin: 0 auto; padding: 2.6rem 1.5rem 2rem; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; }
+  .footer-cols h4 { color: var(--platinum); font-size: 0.82rem; font-weight: 700; margin-bottom: 0.9rem; letter-spacing: 0.01em; font-family: "Source Sans 3", sans-serif; }
+  .footer-cols ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+  .footer-cols a { text-decoration: none; color: var(--silver); font-size: 0.85rem; transition: color 0.15s ease; }
+  .footer-cols a:hover { color: var(--gold); }
+  @media (max-width: 780px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .footer-cols { grid-template-columns: 1fr; } }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-bottom__inner { max-width: 1180px; margin: 0 auto; padding: 1.1rem 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.8rem; font-size: 0.76rem; color: var(--steel); }
+  .footer-bottom__inner nav { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .footer-bottom__inner a { text-decoration: none; color: var(--steel); }
+  .footer-bottom__inner a:hover { color: var(--silver); }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<div class="utility-bar">
+  <div class="utility-bar__inner">
+    <span class="utility-bar__tag">SVR Security Solutions &mdash; Contracted Protection &amp; Risk</span>
+    <a href="../contact.html">Contact us</a>
+  </div>
+</div>
+<header class="site">
+  <div class="nav-row">
+    <a class="brand" href="../index.html">
+      <img class="brand__mark" src="data:image/png;base64,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" alt="SVR Private Security crest logo">
+      <span><span class="brand__word">SVR Security Solutions</span><span class="brand__sub">Private Security</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="l1nav">Menu</button>
+    <nav class="l1" id="l1nav" aria-label="Primary">
+      <div class="l1-item"><a class="l1-link" href="../index.html">Home</a></div>
+<div class="l1-item" data-open="false"><button aria-expanded="false" aria-controls="panel-about">About us <span class="caret"></span></button><div class="l2-panel" id="panel-about" role="menu"><a href="../about/what-we-do.html">What we do</a>
+<a href="../about/our-story.html">Our story</a>
+<a href="../about/our-leadership.html">Our leadership</a>
+<a href="../about/licensing-compliance.html">Licensing & compliance</a>
+<a href="../about/partnerships.html">Partnerships</a>
+<a href="../about/news.html">News</a></div></div>
+<div class="l1-item" data-open="false"><button aria-expanded="false" aria-controls="panel-careers">Careers <span class="caret"></span></button><div class="l2-panel" id="panel-careers" role="menu"><a href="../careers/security-officers.html">Security Officers</a>
+<a href="../careers/systems-technology-specialists.html">Systems & Technology Specialists</a>
+<a href="../careers/business-support-officers.html">Business Support Officers</a>
+<a href="../careers/client-liaison-language-specialists.html">Client Liaison & Language Specialists</a>
+<a href="../careers/corporate-trades-services.html">Corporate, Trades and Services</a>
+<a href="../careers/experienced-hires.html">Experienced Hires</a></div></div>
+<div class="l1-item" data-open="false"><button aria-expanded="false" aria-controls="panel-working">Working at SVR <span class="caret"></span></button><div class="l2-panel" id="panel-working" role="menu"><a href="../working-at-svr/our-culture.html">Our culture</a>
+<a href="../working-at-svr/benefits.html">Benefits</a>
+<a href="../working-at-svr/diversity-inclusion.html">Diversity and Inclusion</a>
+<a href="../working-at-svr/faqs.html">FAQs</a></div></div>
+<div class="l1-item current" data-open="false"><button aria-expanded="false" aria-controls="panel-apply">How to apply <span class="caret"></span></button><div class="l2-panel" id="panel-apply" role="menu"><a href="../how-to-apply/eligibility.html">Eligibility</a>
+<a href="../how-to-apply/vetting.html">Vetting</a>
+<a href="../how-to-apply/tips-for-applying.html">Tips for applying</a>
+<a href="../how-to-apply/apply.html" class="current">Apply Now</a></div></div>
+<div class="l1-item"><a class="l1-link" href="../contact.html">Contact us</a></div>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="../contact.html">Get a quote</a>
+  </div>
+</header>
+
+<main>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../how-to-apply.html">How to apply</a> <span class="sep">/</span> <span>Apply Now</span></div>
+    <h1>Employment Application</h1>
+    <p class="lede">SVR Security Solutions is an equal opportunity employer. Fields marked <strong>*</strong> are required. Submitting this form sends your application &mdash; as a PDF &mdash; to our hiring team.</p>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:2.6rem; padding-bottom:4rem;">
+
+  <div class="privacy-note">
+    <span class="mono" style="color:var(--gold-deep); font-weight:700;">&#9432;</span>
+    <div>
+      <strong>How this works:</strong> when you submit, your browser builds a PDF of your answers and sends it straight to SVR's hiring inbox &mdash; there's no separate upload step. Your Social Security Number is requested because it's required for guard-card licensing and the background check described in the certification section below; it's sent directly over an encrypted connection and is not stored on this website. A copy of your completed application also downloads to your own device so you have a record of what you submitted.
+    </div>
+  </div>
+
+  <form id="applicationForm" class="app-form" novalidate>
+
+    <fieldset class="form-section">
+      <legend>Personal Information</legend>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="f_first">First name *</label><input id="f_first" name="First Name" type="text" required autocomplete="given-name"></div>
+        <div class="field"><label for="f_middle">Middle name</label><input id="f_middle" name="Middle Name" type="text" autocomplete="additional-name"></div>
+        <div class="field"><label for="f_last">Last name *</label><input id="f_last" name="Last Name" type="text" required autocomplete="family-name"></div>
+        <div class="field"><label for="f_date">Today's date</label><input id="f_date" name="Application Date" type="date" required></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field span-2"><label for="f_street">Street address *</label><input id="f_street" name="Street Address" type="text" required autocomplete="address-line1"></div>
+        <div class="field"><label for="f_apt">Apt / Unit No.</label><input id="f_apt" name="Apt/Unit No." type="text" autocomplete="address-line2"></div>
+        <div class="field"><label for="f_city">City *</label><input id="f_city" name="City" type="text" required autocomplete="address-level2"></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="f_state">State *</label><input id="f_state" name="State" type="text" required autocomplete="address-level1"></div>
+        <div class="field"><label for="f_zip">Zip *</label><input id="f_zip" name="Zip" type="text" required autocomplete="postal-code"></div>
+        <div class="field"><label for="f_phone">Mobile / home phone *</label><input id="f_phone" name="Phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="f_email">Contact email *</label><input id="f_email" name="Email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="f_dob">Date of birth *</label><input id="f_dob" name="Date of Birth" type="date" required autocomplete="bday"></div>
+        <div class="field"><label for="f_ssn">Social Security Number *<span class="hint"> &mdash; for licensing/background check</span></label><input id="f_ssn" name="SSN" type="text" inputmode="numeric" pattern="[0-9\-]{9,11}" placeholder="XXX-XX-XXXX" required autocomplete="off"></div>
+      </div>
+
+      <div class="field" style="margin-top:0.6rem;">
+        <label>Are you 18 years or older? *</label>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="18 or older" value="Yes" required> Yes</label>
+          <label class="choice"><input type="radio" name="18 or older" value="No" required> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Are you legally able to work in the U.S.? *</label>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="Legally able to work in US" value="Yes" required> Yes</label>
+          <label class="choice"><input type="radio" name="Legally able to work in US" value="No" required> No</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Have you ever been convicted of a crime? *</label>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="Prior Conviction" value="No" required> No</label>
+          <label class="choice"><input type="radio" name="Prior Conviction" value="Misdemeanor" required> Misdemeanor</label>
+          <label class="choice"><input type="radio" name="Prior Conviction" value="Felony" required> Felony</label>
+        </div>
+      </div>
+      <div class="field-grid cols-2">
+        <div class="field"><label for="f_convdate">Date of last conviction <span class="hint">&mdash; N/A if none</span></label><input id="f_convdate" name="Date of Last Conviction" type="text" placeholder="N/A"></div>
+        <div class="field"><label for="f_convdesc">If yes, please describe</label><input id="f_convdesc" name="Conviction Description" type="text" placeholder="N/A"></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Employment Desired</legend>
+      <div class="field">
+        <label>Position desired *</label>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="Position Desired" value="Patrol Guard" required> Patrol Guard</label>
+          <label class="choice"><input type="radio" name="Position Desired" value="Unarmed Standing Guard" required> Unarmed Standing Guard</label>
+          <label class="choice"><input type="radio" name="Position Desired" value="Armed Standing Guard" required> Armed Standing Guard</label>
+        </div>
+      </div>
+      <div class="field-grid cols-2">
+        <div class="field"><label for="f_hours">Desired hours per week *</label><input id="f_hours" name="Desired Hours/Week" type="number" min="1" max="80" required></div>
+        <div class="field"><label for="f_start">Date you can start *</label><input id="f_start" name="Start Date Available" type="date" required></div>
+      </div>
+      <div class="field">
+        <label>I prefer to work what shifts?</label>
+        <div class="section-note" style="margin-top:0.3rem;">Select a preference for each day &mdash; leave as "Not available" if you can't work that day.</div>
+        <table class="shift-table">
+          <thead><tr><th>Day</th><th>Preference</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td><select id="shift_monday" name="Shift: Monday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Tuesday</td><td><select id="shift_tuesday" name="Shift: Tuesday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Wednesday</td><td><select id="shift_wednesday" name="Shift: Wednesday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Thursday</td><td><select id="shift_thursday" name="Shift: Thursday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Friday</td><td><select id="shift_friday" name="Shift: Friday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Saturday</td><td><select id="shift_saturday" name="Shift: Saturday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+<tr><td>Sunday</td><td><select id="shift_sunday" name="Shift: Sunday"><option value="Not available">Not available</option><option value="Day shift">Day shift</option><option value="Evening shift">Evening shift</option><option value="Night shift">Night shift</option><option value="Any shift">Any shift</option></select></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Job Requirements</legend>
+      <div class="field">
+        <label>Do you have prior work experience in the security industry? *</label>
+        <div class="choice-row">
+          <label class="choice"><input type="radio" name="Prior Security Experience" value="Yes" required> Yes</label>
+          <label class="choice"><input type="radio" name="Prior Security Experience" value="No" required> No</label>
+        </div>
+      </div>
+      <div class="field-grid cols-3">
+        <div class="field"><label for="f_expmonths">If yes, how many months total?</label><input id="f_expmonths" name="Prior Experience (Months)" type="number" min="0"></div>
+        <div class="field"><label for="f_expcompany">What company?</label><input id="f_expcompany" name="Prior Experience Company" type="text"></div>
+        <div class="field"><label for="f_expcity">What city/state?</label><input id="f_expcity" name="Prior Experience City/State" type="text"></div>
+      </div>
+      <div class="field">
+        <label for="f_why">Why do you want to work for our company? *</label>
+        <textarea id="f_why" name="Why SVR" required></textarea>
+      </div>
+      <div class="field">
+        <label for="f_behaviors">What behaviors do you think are needed to be successful in this job? *</label>
+        <textarea id="f_behaviors" name="Success Behaviors" required></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Certifications &amp; Permits</legend>
+      <div class="section-note">Optional &mdash; complete any that apply to you.</div>
+      
+    <div class="field-grid cols-3" style="align-items:end;">
+      <div class="field"><label class="choice"><input type="checkbox" name="Guard Card Held"> Guard Card</label></div>
+      <div class="field"><label for="guard_card_number">Number</label><input id="guard_card_number" name="Guard Card Number" type="text"></div>
+      <div class="field"><label for="guard_card_expiration">Expiration date</label><input id="guard_card_expiration" name="Guard Card Expiration" type="date"></div>
+    </div>
+    
+    <div class="field-grid cols-3" style="align-items:end;">
+      <div class="field"><label class="choice"><input type="checkbox" name="Firearm Permit Held"> Firearm Permit</label></div>
+      <div class="field"><label for="firearm_permit_number">Number</label><input id="firearm_permit_number" name="Firearm Permit Number" type="text"></div>
+      <div class="field"><label for="firearm_permit_expiration">Expiration date</label><input id="firearm_permit_expiration" name="Firearm Permit Expiration" type="date"></div>
+    </div>
+    
+    <div class="field-grid cols-3" style="align-items:end;">
+      <div class="field"><label class="choice"><input type="checkbox" name="Other Permit Held"> Other Permit</label></div>
+      <div class="field"><label for="other_permit_number">Number</label><input id="other_permit_number" name="Other Permit Number" type="text"></div>
+      <div class="field"><label for="other_permit_expiration">Expiration date</label><input id="other_permit_expiration" name="Other Permit Expiration" type="date"></div>
+    </div>
+    
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Employment History</legend>
+      <div class="section-note">List your last three employers, assignments, or volunteer activities (including military experience), most recent first. Explain any gaps in the comments section below.</div>
+      
+    <div class="history-block">
+      <span class="index-tag">Employer 1 (most recent) *</span>
+      <div class="field-grid cols-3">
+        <div class="field span-2"><label for="emp1_name">Employer name *</label><input id="emp1_name" name="Employer 1 Name" type="text" required></div>
+        <div class="field"><label for="emp1_addr">Employer address</label><input id="emp1_addr" name="Employer 1 Address" type="text"></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="emp1_title">Job title *</label><input id="emp1_title" name="Employer 1 Job Title" type="text" required></div>
+        <div class="field"><label for="emp1_start">Start (mm/yyyy)</label><input id="emp1_start" name="Employer 1 Start" type="month"></div>
+        <div class="field"><label for="emp1_end">End (mm/yyyy)</label><input id="emp1_end" name="Employer 1 End" type="month"></div>
+        <div class="field"><label for="emp1_pay">Gross income / hourly rate</label><input id="emp1_pay" name="Employer 1 Pay" type="text"></div>
+      </div>
+      <div class="field"><label for="emp1_desc">Job description</label><textarea id="emp1_desc" name="Employer 1 Description"></textarea></div>
+      <div class="field-grid cols-3">
+        <div class="field"><label for="emp1_sup">Supervisor name</label><input id="emp1_sup" name="Employer 1 Supervisor" type="text"></div>
+        <div class="field"><label for="emp1_supc">Supervisor contact number</label><input id="emp1_supc" name="Employer 1 Supervisor Contact" type="tel"></div>
+        <div class="field"><label for="emp1_reason">Reason for leaving</label><input id="emp1_reason" name="Employer 1 Reason for Leaving" type="text"></div>
+      </div>
+    </div>
+    
+    <div class="history-block">
+      <span class="index-tag">Employer 2 (optional)</span>
+      <div class="field-grid cols-3">
+        <div class="field span-2"><label for="emp2_name">Employer name</label><input id="emp2_name" name="Employer 2 Name" type="text"></div>
+        <div class="field"><label for="emp2_addr">Employer address</label><input id="emp2_addr" name="Employer 2 Address" type="text"></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="emp2_title">Job title</label><input id="emp2_title" name="Employer 2 Job Title" type="text"></div>
+        <div class="field"><label for="emp2_start">Start (mm/yyyy)</label><input id="emp2_start" name="Employer 2 Start" type="month"></div>
+        <div class="field"><label for="emp2_end">End (mm/yyyy)</label><input id="emp2_end" name="Employer 2 End" type="month"></div>
+        <div class="field"><label for="emp2_pay">Gross income / hourly rate</label><input id="emp2_pay" name="Employer 2 Pay" type="text"></div>
+      </div>
+      <div class="field"><label for="emp2_desc">Job description</label><textarea id="emp2_desc" name="Employer 2 Description"></textarea></div>
+      <div class="field-grid cols-3">
+        <div class="field"><label for="emp2_sup">Supervisor name</label><input id="emp2_sup" name="Employer 2 Supervisor" type="text"></div>
+        <div class="field"><label for="emp2_supc">Supervisor contact number</label><input id="emp2_supc" name="Employer 2 Supervisor Contact" type="tel"></div>
+        <div class="field"><label for="emp2_reason">Reason for leaving</label><input id="emp2_reason" name="Employer 2 Reason for Leaving" type="text"></div>
+      </div>
+    </div>
+    
+    <div class="history-block">
+      <span class="index-tag">Employer 3 (optional)</span>
+      <div class="field-grid cols-3">
+        <div class="field span-2"><label for="emp3_name">Employer name</label><input id="emp3_name" name="Employer 3 Name" type="text"></div>
+        <div class="field"><label for="emp3_addr">Employer address</label><input id="emp3_addr" name="Employer 3 Address" type="text"></div>
+      </div>
+      <div class="field-grid cols-4">
+        <div class="field"><label for="emp3_title">Job title</label><input id="emp3_title" name="Employer 3 Job Title" type="text"></div>
+        <div class="field"><label for="emp3_start">Start (mm/yyyy)</label><input id="emp3_start" name="Employer 3 Start" type="month"></div>
+        <div class="field"><label for="emp3_end">End (mm/yyyy)</label><input id="emp3_end" name="Employer 3 End" type="month"></div>
+        <div class="field"><label for="emp3_pay">Gross income / hourly rate</label><input id="emp3_pay" name="Employer 3 Pay" type="text"></div>
+      </div>
+      <div class="field"><label for="emp3_desc">Job description</label><textarea id="emp3_desc" name="Employer 3 Description"></textarea></div>
+      <div class="field-grid cols-3">
+        <div class="field"><label for="emp3_sup">Supervisor name</label><input id="emp3_sup" name="Employer 3 Supervisor" type="text"></div>
+        <div class="field"><label for="emp3_supc">Supervisor contact number</label><input id="emp3_supc" name="Employer 3 Supervisor Contact" type="tel"></div>
+        <div class="field"><label for="emp3_reason">Reason for leaving</label><input id="emp3_reason" name="Employer 3 Reason for Leaving" type="text"></div>
+      </div>
+    </div>
+    
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Education</legend>
+      <div class="edu-table-scroll">
+        <table class="edu-table">
+          <thead><tr><th>Level</th><th>Name of school</th><th>Location</th><th>Date</th><th>Graduated?</th><th>Qualification</th></tr></thead>
+          <tbody>
+            
+    <tr>
+      <td class="row-label">Grammar School</td>
+      <td><input name="Grammar School - School" type="text"></td>
+      <td><input name="Grammar School - Location" type="text"></td>
+      <td><input name="Grammar School - Date" type="text" placeholder="yyyy"></td>
+      <td><select name="Grammar School - Graduated"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+      <td><input name="Grammar School - Qualification" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="row-label">High School</td>
+      <td><input name="High School - School" type="text"></td>
+      <td><input name="High School - Location" type="text"></td>
+      <td><input name="High School - Date" type="text" placeholder="yyyy"></td>
+      <td><select name="High School - Graduated"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+      <td><input name="High School - Qualification" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="row-label">College</td>
+      <td><input name="College - School" type="text"></td>
+      <td><input name="College - Location" type="text"></td>
+      <td><input name="College - Date" type="text" placeholder="yyyy"></td>
+      <td><select name="College - Graduated"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+      <td><input name="College - Qualification" type="text"></td>
+    </tr>
+    
+    <tr>
+      <td class="row-label">Trade/business/other</td>
+      <td><input name="Trade/Business/Other School - School" type="text"></td>
+      <td><input name="Trade/Business/Other School - Location" type="text"></td>
+      <td><input name="Trade/Business/Other School - Date" type="text" placeholder="yyyy"></td>
+      <td><select name="Trade/Business/Other School - Graduated"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+      <td><input name="Trade/Business/Other School - Qualification" type="text"></td>
+    </tr>
+    
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Comments</legend>
+      <div class="field">
+        <label for="f_comments">Comments, including explanation of any gaps in employment</label>
+        <textarea id="f_comments" name="Comments"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset class="form-section">
+      <legend>Certification</legend>
+      <div class="section-note">Please read carefully before signing.</div>
+      <div class="legal-box">
+        <p>I certify that all the information submitted by me on this application is true and complete. I understand that if any false information, omissions, or misrepresentations are discovered, my application may be rejected, and, if I am employed, my employment may be terminated at any time. In consideration of my employment, I agree to conform to the company's rules, regulations and Supervisor's directions. I agree that my employment is at-will, and that my employment and compensation can be terminated, with or without cause, and with or without notice, at either my or the company's option. I also understand and agree that the terms and conditions of my employment may be changed, with or without cause, and with or without notice, at any time by the company. I understand that no company r&eacute;presentative, other than the President, and then only in writing, has any authority to enter into any agreement for employment for any specific period of time or to make any agreement contrary to the forgoing.</p>
+        <p>I further authorize all work related verifications of employment, education, training or other work related Information, as well as credit or criminal records checking. I authorize all of this Information to be provided to the company or their agent and release them from any liability which might be claimed.</p>
+        <p>If required, I agree to fully participate and complete the required pre-employment drug screening.</p>
+        <p>If required, I agree to fully participate and complete the required employment trainings routinely.</p>
+      </div>
+      <div class="consent-list">
+        <label class="choice"><input type="checkbox" name="Consent: Information True & At-Will Terms" value="Agreed" required><span>I certify that all information on this application is true and complete, and I agree to the at-will employment terms above. *</span></label>
+        <label class="choice"><input type="checkbox" name="Consent: Background Verification" value="Agreed" required><span>I authorize verification of my employment, education, and training history, and consent to credit or criminal records checking as described above. *</span></label>
+        <label class="choice"><input type="checkbox" name="Consent: Drug Screening" value="Agreed" required><span>If required, I agree to fully participate in the pre-employment drug screening. *</span></label>
+        <label class="choice"><input type="checkbox" name="Consent: Training Participation" value="Agreed" required><span>If required, I agree to fully participate in employment trainings routinely. *</span></label>
+      </div>
+      <div class="field-grid cols-2">
+        <div class="field"><label for="f_signature">Applicant's signature (type your full legal name) *</label><input id="f_signature" name="Applicant Signature" type="text" required></div>
+        <div class="field"><label for="f_sigdate">Date *</label><input id="f_sigdate" name="Signature Date" type="date" required></div>
+      </div>
+      <p class="section-note" style="margin-top:-0.4rem;">By typing your name above and submitting this form, you are providing your electronic signature and agreeing to the certifications above.</p>
+    </fieldset>
+
+    <div class="submit-row">
+      <button type="submit" class="btn btn-gold" id="submitBtn">Submit Application</button>
+      <span class="section-note" style="margin:0;">A PDF copy will also download to your device.</span>
+    </div>
+    <div id="formStatus" role="status" aria-live="polite"></div>
+  </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js"></script>
+<script>
+(function () {
+  var HIRING_EMAIL = "admin@zymkhize.com";
+  var form = document.getElementById("applicationForm");
+  var statusEl = document.getElementById("formStatus");
+  var submitBtn = document.getElementById("submitBtn");
+
+  // Prefill today's date into the two date-of-signing fields.
+  var todayIso = new Date().toISOString().slice(0, 10);
+  var dApp = document.getElementById("f_date");
+  var dSig = document.getElementById("f_sigdate");
+  if (dApp) dApp.value = todayIso;
+  if (dSig) dSig.value = todayIso;
+
+  function setStatus(kind, html) {
+    statusEl.className = "show " + kind;
+    statusEl.innerHTML = html;
+  }
+
+  function buildApplicationPdf(entries) {
+    if (!window.jspdf) return null;
+    try {
+      var jsPDFCtor = window.jspdf.jsPDF;
+      var doc = new jsPDFCtor({ unit: "pt", format: "letter" });
+      var marginX = 48;
+      var pageWidth = doc.internal.pageSize.getWidth();
+      var pageHeight = doc.internal.pageSize.getHeight();
+      var maxWidth = pageWidth - marginX * 2;
+      var y = 56;
+
+      function ensureSpace(need) {
+        if (y + need > pageHeight - 50) { doc.addPage(); y = 56; }
+      }
+      function title(text) {
+        doc.setFont("helvetica", "bold"); doc.setFontSize(17);
+        doc.text(text, marginX, y); y += 22;
+        doc.setFont("helvetica", "normal"); doc.setFontSize(10);
+        doc.setTextColor(110, 110, 110);
+        doc.text("SVR Security Solutions \u2014 submitted " + new Date().toLocaleString(), marginX, y);
+        doc.setTextColor(20, 20, 20);
+        y += 20;
+      }
+      function heading(text) {
+        ensureSpace(30);
+        doc.setFont("helvetica", "bold"); doc.setFontSize(12.5);
+        doc.text(text, marginX, y); y += 8;
+        doc.setDrawColor(198, 161, 91); doc.setLineWidth(1);
+        doc.line(marginX, y, pageWidth - marginX, y); y += 16;
+      }
+      function field(label, value) {
+        var v = (value === undefined || value === null || value === "") ? "\u2014" : String(value);
+        doc.setFont("helvetica", "bold"); doc.setFontSize(8.5);
+        ensureSpace(12);
+        doc.text(label.toUpperCase(), marginX, y); y += 11;
+        doc.setFont("helvetica", "normal"); doc.setFontSize(10.5);
+        var lines = doc.splitTextToSize(v, maxWidth);
+        lines.forEach(function (line) {
+          ensureSpace(13);
+          doc.text(line, marginX, y); y += 13;
+        });
+        y += 7;
+      }
+
+      title("Employment Application");
+
+      var sectionOf = {};
+      var sections = [
+        ["Personal Information", ["First Name","Middle Name","Last Name","Application Date","Street Address","Apt/Unit No.","City","State","Zip","Phone","Email","Date of Birth","SSN","18 or older","Legally able to work in US","Prior Conviction","Date of Last Conviction","Conviction Description"]],
+        ["Employment Desired", ["Position Desired","Desired Hours/Week","Start Date Available","Shift: Monday","Shift: Tuesday","Shift: Wednesday","Shift: Thursday","Shift: Friday","Shift: Saturday","Shift: Sunday"]],
+        ["Job Requirements", ["Prior Security Experience","Prior Experience (Months)","Prior Experience Company","Prior Experience City/State","Why SVR","Success Behaviors"]],
+        ["Certifications & Permits", ["Guard Card Number","Guard Card Expiration","Firearm Permit Number","Firearm Permit Expiration","Other Permit Number","Other Permit Expiration"]],
+        ["Employment History", ["Employer 1 Name","Employer 1 Address","Employer 1 Job Title","Employer 1 Start","Employer 1 End","Employer 1 Pay","Employer 1 Description","Employer 1 Supervisor","Employer 1 Supervisor Contact","Employer 1 Reason for Leaving",
+                                  "Employer 2 Name","Employer 2 Address","Employer 2 Job Title","Employer 2 Start","Employer 2 End","Employer 2 Pay","Employer 2 Description","Employer 2 Supervisor","Employer 2 Supervisor Contact","Employer 2 Reason for Leaving",
+                                  "Employer 3 Name","Employer 3 Address","Employer 3 Job Title","Employer 3 Start","Employer 3 End","Employer 3 Pay","Employer 3 Description","Employer 3 Supervisor","Employer 3 Supervisor Contact","Employer 3 Reason for Leaving"]],
+        ["Education", ["Grammar School","High School","College","Trade/Business/Other School"]],
+        ["Comments", ["Comments"]],
+        ["Certification & Signature", ["Consent: Information True & At-Will Terms","Consent: Background Verification","Consent: Drug Screening","Consent: Training Participation","Applicant Signature","Signature Date"]]
+      ];
+
+      sections.forEach(function (sec) {
+        var label = sec[0], keys = sec[1];
+        var any = keys.some(function (k) { return entries[k] !== undefined; });
+        if (!any) return;
+        heading(label);
+        keys.forEach(function (k) {
+          if (entries[k] === undefined) return;
+          field(k, entries[k]);
+        });
+      });
+
+      return doc;
+    } catch (err) {
+      console.error("PDF generation failed:", err);
+      return null;
+    }
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting\u2026";
+    setStatus("pending show", "Submitting your application\u2026");
+
+    var rawData = new FormData(form);
+    var entries = {};
+    rawData.forEach(function (value, key) { entries[key] = value; });
+
+    // Fold the seven per-day shift selects into readable "Shift: Monday" style keys for the PDF.
+    ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"].forEach(function (day) {
+      var el = document.getElementById("shift_" + day.toLowerCase());
+      if (el) entries["Shift: " + day] = el.value;
+    });
+
+    var lastName = (entries["Last Name"] || "Applicant").replace(/[^a-z0-9]+/gi, "");
+    var firstName = (entries["First Name"] || "").replace(/[^a-z0-9]+/gi, "");
+    var filename = "SVR-Application-" + lastName + (firstName ? "-" + firstName : "") + ".pdf";
+
+    var pdfDoc = buildApplicationPdf(entries);
+    var pdfBlob = pdfDoc ? pdfDoc.output("blob") : null;
+
+    var submission = new FormData();
+    rawData.forEach(function (value, key) { submission.append(key, value); });
+    ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"].forEach(function (day) {
+      var el = document.getElementById("shift_" + day.toLowerCase());
+      if (el) submission.append("Shift: " + day, el.value);
+    });
+    submission.append("_subject", "New SVR Employment Application \u2014 " + (entries["Last Name"] || "") + ", " + (entries["First Name"] || ""));
+    submission.append("_template", "table");
+    submission.append("_captcha", "false");
+    if (pdfBlob) submission.append("attachment", pdfBlob, filename);
+
+    function downloadPdfLocally() {
+      if (!pdfBlob) return;
+      var url = URL.createObjectURL(pdfBlob);
+      var a = document.createElement("a");
+      a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    }
+
+    fetch("https://formsubmit.co/ajax/" + HIRING_EMAIL, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: submission
+    }).then(function (res) {
+      if (!res.ok) throw new Error("Submission service returned " + res.status);
+      return res.json().catch(function () { return {}; });
+    }).then(function () {
+      downloadPdfLocally();
+      submitBtn.textContent = "Submitted";
+      var pdfNote = pdfBlob ? "A PDF copy has also downloaded to your device." : "Your answers were sent, but the PDF copy couldn't be generated in this browser \u2014 please note your answers for your records.";
+      setStatus("success show", "<strong>Application submitted.</strong> Thank you \u2014 SVR's hiring team has received your application. " + pdfNote);
+      form.reset();
+      if (dApp) dApp.value = todayIso;
+      if (dSig) dSig.value = todayIso;
+    }).catch(function (err) {
+      console.error("Application submission failed:", err);
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Application";
+      downloadPdfLocally();
+      var mailBody = encodeURIComponent(
+        "Hi SVR team,\n\nI tried to submit my application online but it didn't go through. " +
+        "I've attached my completed application PDF (downloaded automatically) to this email.\n\nApplicant: " +
+        (entries["First Name"] || "") + " " + (entries["Last Name"] || "") + "\nPhone: " + (entries["Phone"] || "") + "\nEmail: " + (entries["Email"] || "")
+      );
+      var mailtoHref = "mailto:" + HIRING_EMAIL + "?subject=" + encodeURIComponent("Employment Application (manual send)") + "&body=" + mailBody;
+      var pdfFallbackNote = pdfBlob
+        ? "Your completed application has downloaded as a PDF (" + filename + ") \u2014 please attach it to a new email and send it yourself"
+        : "We also couldn't generate a PDF copy in this browser \u2014 please note your answers for your records and use the button below";
+      setStatus("error show",
+        "<strong>We couldn't submit this automatically.</strong> " + pdfFallbackNote + ": " +
+        "<a href=\"" + mailtoHref + "\">open a pre-filled email to " + HIRING_EMAIL + "</a>."
+      );
+    });
+  });
+})();
+</script>
+
+</main>
+
+<footer class="site">
+  <div class="footer-cols">
+    <div><h4><a href="../about.html" style="color:inherit; text-decoration:none;">About us</a></h4><ul><li><a href="../about/what-we-do.html">What we do</a></li>
+<li><a href="../about/our-story.html">Our story</a></li>
+<li><a href="../about/our-leadership.html">Our leadership</a></li>
+<li><a href="../about/licensing-compliance.html">Licensing & compliance</a></li>
+<li><a href="../about/partnerships.html">Partnerships</a></li>
+<li><a href="../about/news.html">News</a></li></ul></div>
+<div><h4><a href="../careers.html" style="color:inherit; text-decoration:none;">Careers</a></h4><ul><li><a href="../careers/security-officers.html">Security Officers</a></li>
+<li><a href="../careers/systems-technology-specialists.html">Systems & Technology Specialists</a></li>
+<li><a href="../careers/business-support-officers.html">Business Support Officers</a></li>
+<li><a href="../careers/client-liaison-language-specialists.html">Client Liaison & Language Specialists</a></li>
+<li><a href="../careers/corporate-trades-services.html">Corporate, Trades and Services</a></li>
+<li><a href="../careers/experienced-hires.html">Experienced Hires</a></li></ul></div>
+<div><h4><a href="../working-at-svr.html" style="color:inherit; text-decoration:none;">Working at SVR</a></h4><ul><li><a href="../working-at-svr/our-culture.html">Our culture</a></li>
+<li><a href="../working-at-svr/benefits.html">Benefits</a></li>
+<li><a href="../working-at-svr/diversity-inclusion.html">Diversity and Inclusion</a></li>
+<li><a href="../working-at-svr/faqs.html">FAQs</a></li></ul></div>
+<div><h4><a href="../how-to-apply.html" style="color:inherit; text-decoration:none;">How to apply</a></h4><ul><li><a href="../how-to-apply/eligibility.html">Eligibility</a></li>
+<li><a href="../how-to-apply/vetting.html">Vetting</a></li>
+<li><a href="../how-to-apply/tips-for-applying.html">Tips for applying</a></li>
+<li><a href="../how-to-apply/apply.html">Apply Now</a></li></ul></div>
+<div><h4>Contact us</h4><ul><li><a href="../contact.html">Get in touch</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom__inner">
+      <span>&copy; <span class="ph" title="Placeholder — confirm founding/current year">2026</span> SVR Security Solutions. All rights reserved.</span>
+      <nav aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Sitemap</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.l1-item[data-open]'));
+    function closeAll(except) {
+      items.forEach(function (item) {
+        if (item === except) return;
+        item.setAttribute('data-open', 'false');
+        var btn = item.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+    items.forEach(function (item) {
+      var btn = item.querySelector('button');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var isOpen = item.getAttribute('data-open') === 'true';
+        closeAll(item);
+        item.setAttribute('data-open', isOpen ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.l1-item')) closeAll(null);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll(null);
+    });
+    var menuToggle = document.getElementById('menuToggle');
+    var l1nav = document.getElementById('l1nav');
+    if (menuToggle && l1nav) {
+      menuToggle.addEventListener('click', function () {
+        var open = l1nav.getAttribute('data-mobile-open') === 'true';
+        l1nav.setAttribute('data-mobile-open', open ? 'false' : 'true');
+        menuToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        menuToggle.textContent = open ? 'Menu' : 'Close';
+      });
+    }
+  })();
+</script>
